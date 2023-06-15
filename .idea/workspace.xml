@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196f4622-4aa1-4b1a-b442-79e1cd368e46" name="Changes" comment="solve db">
+    <list default="true" id="196f4622-4aa1-4b1a-b442-79e1cd368e46" name="Changes" comment="create class for connection to DB">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/connect/MyConnection.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/dao/CartDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/dao/ProductDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/dao/impl/CartDaoImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/dao/impl/ProductDaoImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/CartItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Client.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/entity/Product.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/entity/ProductType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/UserType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/service/CartService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/service/ProductService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
@@ -32,11 +26,12 @@
       <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/display-users.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/users-list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-css.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-js.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/client/home.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/client/login-form.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/client/product-cart.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
@@ -50,6 +45,7 @@
       <list>
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -65,19 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "ruby.rails.projectView.checked": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686821658275</updated>
       <workItem from="1686821659716" duration="2141000" />
-      <workItem from="1686826904847" duration="2053000" />
+      <workItem from="1686826904847" duration="2376000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1686821903662</created>
@@ -110,7 +107,49 @@
       <option name="project" value="LOCAL" />
       <updated>1686822010495</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create class for user with role Admin">
+      <created>1686830286524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830286524</updated>
+    </task>
+    <task id="LOCAL-00005" summary="create class CartItem">
+      <created>1686830302764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830302764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create class CLient">
+      <created>1686830314522</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830314522</updated>
+    </task>
+    <task id="LOCAL-00007" summary="super class User">
+      <created>1686830337305</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830337305</updated>
+    </task>
+    <task id="LOCAL-00008" summary="implement class for users role">
+      <created>1686830373749</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830373749</updated>
+    </task>
+    <task id="LOCAL-00009" summary="create class for connection to DB">
+      <created>1686830443497</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830443497</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +170,13 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="add db properties" />
     <MESSAGE value="solve db" />
-    <option name="LAST_COMMIT_MESSAGE" value="solve db" />
+    <MESSAGE value="create class for user with role Admin" />
+    <MESSAGE value="create class CartItem" />
+    <MESSAGE value="create class CLient" />
+    <MESSAGE value="super class User" />
+    <MESSAGE value="implement class for users role" />
+    <MESSAGE value="create class for connection to DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="create class for connection to DB" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
